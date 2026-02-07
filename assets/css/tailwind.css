@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-gray-50 text-gray-900 antialiased;
+  }
+}
+
+@layer components {
+  .section-animate {
+    @apply opacity-0 translate-y-4 transition-all duration-500 ease-out;
+  }
+
+  .section-animate.visible {
+    @apply opacity-100 translate-y-0;
+  }
+}
